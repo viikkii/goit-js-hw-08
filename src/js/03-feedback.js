@@ -19,25 +19,3 @@ function saveEmail(evt) {
 }
 
 localStorage.removeItem("formFilter"); 
-
-// form.addEventListener("remove", evt => {
-//     formFilter = {};
-//     // formFilter[evt.target.name] = evt.target.value;
-//     console.log(formFilter);
-//     localStorage.removeItem('formFilter');   
-// });
-
-// form.addEventListener(localStorage.removeItem('formFilter'));
-
-
-
-// function saveEmail(evt) {
-//   evt.preventDefault();
-//   localStorage.setItem(LOCALSTORAGE_KEY, form.elements.email.value);
-// //   updateOutput();
-//     form.reset();
-// }
-// console.log(form)
-// function updateOutput() {
-//   output.textContent = localStorage.getItem(LOCALSTORAGE_KEY) || "";
-// }
