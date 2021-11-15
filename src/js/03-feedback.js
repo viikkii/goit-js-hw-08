@@ -1,4 +1,4 @@
-// import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 const LOCALSTORAGE_KEY = "feedback-form-state";
 const form = document.querySelector(".feedback-form");
@@ -20,14 +20,3 @@ function saveEmail(evt) {
 
 localStorage.removeItem("formFilter");
 
-
-// initForm()
-// function initForm() {
-//   let persistedForm = localStorage.getItem(LOCAL_STORAGE_KEY);
-//   if (persistedForm) {
-//     persistedForm = JSON.parse(persistedForm);
-//     Object.entries(persistedForm).forEach(([name, value]) => {
-//       formRef.elements[name].value = value;
-//     });
-//   }
-// }
