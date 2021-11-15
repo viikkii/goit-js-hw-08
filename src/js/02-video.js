@@ -8,7 +8,7 @@ const LOCALSTORAGE_KEY = "videoplayer-current-time";
 
 // старт видео 
 const onPlay = function(data) {
-    console.log('Played the video!')};
+    console.log('Play the video!')};
 player.on('play', onPlay);
 
 // получаем название видеоролика
@@ -23,12 +23,9 @@ function TimeUpdateNow(evt) {
 }
 player.on('timeupdate', throttle(TimeUpdateNow, 2000));
 
-// получить текущее время
-const saveCurrentTime = player.setCurrentTime(0)
-    .then(function (seconds) {
-    console(saveCurrentTime)
-})
-    .catch(function (error) {
-   console.log(`Error!`)
-    }
-);
+const saveCurrentTime = localStorage.getItem(LOCALSTORAGE_KEY);
+console(saveCurrentTime);
+if (saveCurrentTime) {
+player.setCurrentTime(saveCurrentTime)
+}
+

@@ -18,4 +18,16 @@ function saveEmail(evt) {
     console.log(`message :`, form.elements.message.value);
 }
 
-localStorage.removeItem("formFilter"); 
+localStorage.removeItem("formFilter");
+
+
+// initForm()
+// function initForm() {
+//   let persistedForm = localStorage.getItem(LOCAL_STORAGE_KEY);
+//   if (persistedForm) {
+//     persistedForm = JSON.parse(persistedForm);
+//     Object.entries(persistedForm).forEach(([name, value]) => {
+//       formRef.elements[name].value = value;
+//     });
+//   }
+// }
