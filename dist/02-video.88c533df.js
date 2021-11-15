@@ -117,6 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
+<<<<<<< Updated upstream
 })({"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
 var global = arguments[3];
 /**
@@ -3144,6 +3145,11 @@ const saveCurrentTime = player.setCurrentTime(0).then(function (seconds) {
   console.log(`Error!`);
 });
 },{"lodash.throttle":"../node_modules/lodash.throttle/index.js","@vimeo/player":"../node_modules/@vimeo/player/dist/player.es.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+=======
+})({"js/02-video.js":[function(require,module,exports) {
+
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+>>>>>>> Stashed changes
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3171,7 +3177,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< Updated upstream
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "65403" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60050" + '/');
+>>>>>>> Stashed changes
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/03-feedback.js":[function(require,module,exports) {
+<<<<<<< Updated upstream
 // import throttle from 'lodash.throttle';
 const LOCALSTORAGE_KEY = "feedback-form-state";
 const form = document.querySelector(".feedback-form");
@@ -136,6 +137,9 @@ function saveEmail(evt) {
 }
 
 localStorage.removeItem("formFilter");
+=======
+
+>>>>>>> Stashed changes
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -164,7 +168,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< Updated upstream
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "65403" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60050" + '/');
+>>>>>>> Stashed changes
 
   ws.onmessage = function (event) {
     checkedAssets = {};

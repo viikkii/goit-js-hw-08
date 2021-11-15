@@ -117,6 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
+<<<<<<< Updated upstream
 })({"../node_modules/simplelightbox/dist/simple-lightbox.modules.js":[function(require,module,exports) {
 var global = arguments[3];
 /*!
@@ -1952,6 +1953,9 @@ module.exports = reloadCSS;
         module.hot.accept(reloadCSS);
       
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/gallery-items.js":[function(require,module,exports) {
+=======
+})({"js/gallery-items.js":[function(require,module,exports) {
+>>>>>>> Stashed changes
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1999,6 +2003,7 @@ exports.galleryItems = galleryItems;
 },{}],"js/01-gallery.js":[function(require,module,exports) {
 "use strict";
 
+<<<<<<< Updated upstream
 var _simplelightbox = _interopRequireDefault(require("simplelightbox"));
 
 require("simplelightbox/dist/simple-lightbox.min.css");
@@ -2036,6 +2041,14 @@ lightbox.on('show.simplelightbox', function () {
   console.log(`hi`);
 });
 },{"simplelightbox":"../node_modules/simplelightbox/dist/simple-lightbox.modules.js","simplelightbox/dist/simple-lightbox.min.css":"../node_modules/simplelightbox/dist/simple-lightbox.min.css","./gallery-items":"js/gallery-items.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+=======
+var _galleryItems = require("./gallery-items");
+
+// Add imports above this line
+// Change code below this line
+console.log(_galleryItems.galleryItems);
+},{"./gallery-items":"js/gallery-items.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+>>>>>>> Stashed changes
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2063,7 +2076,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< Updated upstream
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "65403" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60050" + '/');
+>>>>>>> Stashed changes
 
   ws.onmessage = function (event) {
     checkedAssets = {};
