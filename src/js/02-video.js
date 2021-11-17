@@ -7,25 +7,20 @@ const player = new Player(iframe);
 const LOCALSTORAGE_KEY = "videoplayer-current-time";
 
 // старт видео 
-const onPlay = function(data) {
-    console.log('Play the video!')};
+const onPlay = function(data) {console.log('Play the video!')};
 player.on('play', onPlay);
 
-// получаем название видеоролика
-player.getVideoTitle().then(function(title) {
-     console.log('title:', title);
-});
-
 // отслеживания события
-function TimeUpdateNow(evt) {
+player.on('timeupdate', throttle(timeUpdateNow, 2000));
+function timeUpdateNow(evt) {
     localStorage.setItem(LOCALSTORAGE_KEY, evt.seconds);
     console.log(`Video now:  ${evt.seconds}`); 
 }
-player.on('timeupdate', throttle(TimeUpdateNow, 2000));
+
 
 const saveCurrentTime = localStorage.getItem(LOCALSTORAGE_KEY);
-console(saveCurrentTime);
 if (saveCurrentTime) {
-player.setCurrentTime(saveCurrentTime)
+    player.setCurrentTime(saveCurrentTime)
+    console.log(saveCurrentTime);
+    localStorage.removeItem(LOCALSTORAGE_KEY);
 }
-
